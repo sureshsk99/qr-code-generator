@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    background: #262a2f;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.qr-code{
+    padding: 30px 35px;
+    width:500px;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+.qr-code p{
+    font-weight: 600px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+.qr-code input{
+    width: 100%;
+    height:40px;
+    outline:none;
+    border: 2px solid #ea49a7;
+    border-radius: 5px;
+    text-indent: 10px;
+    margin: 10px 0 20px;
+}
+.qr-code button{
+    background-color: #ea49a7;
+    color:aliceblue;
+    padding:10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin:20px 0;
+}
+#imgBox{
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+#imgBox img{
+    width:100%;
+    padding:10px;
+}
+#imgBox.show-img{
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #b8b5b5;
+}
+.error{
+    animation: shake 0.1s linear 10;
+}
+#errorMessage{
+    color: #ea49a7;
+}
+@keyframes shake {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
